@@ -19,7 +19,7 @@ class Migration(migrations.Migration):
         Flat = apps.get_model('property', 'Flat')
         for flat in Flat.objects.all():
             flat.new_building = False
-            post.save()
+            flat.save()
 
     dependencies = [
         ('property', '0004_auto_20231201_2124'),
